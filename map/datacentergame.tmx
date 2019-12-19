@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.5" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="47" nextobjectid="1">
+ <tileset firstgid="1" name="ninja" tilewidth="32" tileheight="32" tilecount="84" columns="7">
+  <image source="images/ninja/ninja.png" width="224" height="384"/>
+ </tileset>
+ <tileset firstgid="85" name="DataCenter" tilewidth="16" tileheight="16" tilecount="1664" columns="52">
+  <image source="images/factory_tileset.png" width="832" height="512"/>
+ </tileset>
+ <tileset firstgid="1749" name="Logic" tilewidth="16" tileheight="16" tilecount="100" columns="10">
+  <image source="../../../TiledProjects/Images/logic.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="1849" name="OutDataCenter" tilewidth="32" tileheight="32" tilecount="64" columns="8">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Building.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="1913" name="Street" tilewidth="32" tileheight="32" tilecount="475" columns="25">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Street.png" width="800" height="608"/>
+ </tileset>
+ <tileset firstgid="2388" name="Objects" tilewidth="32" tileheight="32" tilecount="64" columns="8">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Objects.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="2452" name="InteriorFurniture" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Interior-Furniture.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="2708" name="Trashcan" tilewidth="60" tileheight="60" margin="4" tilecount="1" columns="1">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Fire/Trashcan.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2709" name="DataCenterLogic" tilewidth="16" tileheight="16" tilecount="1664" columns="52">
+  <image source="../../../TiledProjects/Images/factory_tileset_red.png" width="832" height="512"/>
+ </tileset>
+ <tileset firstgid="4373" name="AgentWalk" tilewidth="64" tileheight="64" tilecount="36" columns="9">
+  <image source="../../../TiledProjects/Images/Skorpios_Sprite_Pack/Skorpio's Pack/Characters/Agent/AgentWalk.png" width="576" height="256"/>
+ </tileset>
+ <tileset firstgid="4409" name="dawnlike-generic" tilewidth="16" tileheight="16" tilecount="16" columns="4">
+  <image source="../../../TiledProjects/Images/dawnlike-generic.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="4425" name="dawnlike-mage" tilewidth="16" tileheight="16" tilecount="16" columns="4">
+  <image source="../../../TiledProjects/Images/dawnlike-mage.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="4441" name="ninja_l" tilewidth="32" tileheight="32" tilecount="84" columns="7">
+  <image source="../../../TiledProjects/Images/ninja/ninja_l.png" width="224" height="384"/>
+ </tileset>
+ <tileset firstgid="4525" name="Castle2" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../TiledProjects/Images/medieval/Castle2.png" width="512" height="512"/>
+ </tileset>
+ <layer id="28" name="Ground" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2VTQ7CIBSEG12g5/AnceE1PISJG6NXcOEZdOktvIY3MjHuLBYiIYWi/Rkq85IvEEoZ5j1asowREmvhZi+KOQfV7jxzbfoSIf51pOr/n+u/FW7K/Pvmm/Ql6J/+6b+cDf2/g/6Llv7pn/774f82SJvluED3zbG2iUkfgYxY9X1nJWTut+cvNn10/rvWbzvXrjV+0f9lH1X6CEL0dY3stonzg753Qu5fl1/dr6Nfdi5Q359L344m6l51fp6OPMjxuuh1TD+x6aPqj9A389JUjm1W4w/2t43S12E+65oY9JF3gK3vijb3cBTNshiFz5Hhm1f1PFTPtz6y/jFwUXlItUXnH81D5eEq6vGo+T5ibdafEEIIIeQ7ZsMsm+TMc6aqL8fQ++qKU+71nrfrYYHsnxPyr9H+0ftAMVFnH70P1h/DTP3/0PtAIf95p4T9E0IIIYQQQgghsfMC06TdAABAAAA=
+  </data>
+ </layer>
+ <layer id="29" name="Ground_Details" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2YSU7DQBBFO2lLEA6AsgeMsoqAS3AF+wJskLgILFgAYplFpFwFWHKQDGKbQFnE6hYqD8FDp13/SV/tUa7fv2WXrBSQwOjod7w7cFsHcAPylw3ylw3ylw3ylw3ylw3yr4frwf/vPa5wbx0MHT8fuKOJtXchbD3deuzX59p9ZJwz34/IonVeMeeVmB22O7ZRK0dRj1T0Ha3aYzXZo6H/AwAAAAAAAIDy3PTLq4vAv9GJVuqUdEYKtdnvsv/LwOhZ80rOXQWuK62He/LzRVkuSHPSirQkPdDxNWlDet8q2f7Writuhnk/W2/k+UObOeIUdXReElL/XSYr14WVf94aQf5+k5Xrysp/ifxFAv/wL8X/eY/6/T96Iu8v2uxHzDW29o1wh5psH+F2TPO3j/nkn/O0i2z/ZbRv5NXKrfdEcY7/2DP/cYFXTpHlg3v/+eS/Kun7TyqSvn8c8A//n4L9TwKlpp7+7/wB0p23BABAAAA=
+  </data>
+ </layer>
+ <layer id="30" name="Wall_Back" width="64" height="64" opacity="0.9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3SwQqCQBQF0FHoZywI7GPa1SIo6G9a9bFtahEkY5qWGDrnwEUGnry5aAjM3SWvJyWH/JXz85mSa15PSlL//wF+UWQhLAfOKhvv/vHuvoboX/6xfxnt76to6NDW71M2E/r+u8c7+0qO0bktTbOnEfvHuwEAAAAAoOqWdc8cpd5/nXcPAABM1XbxPt/OAQAAwJju8u469QBAAAA=
+  </data>
+ </layer>
+ <layer id="31" name="Walls" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2Yy05CMRCGC4Qg+7PzIXTrZevWjZeF0aiIEUW5xOt7qOBCTfDozjfUhSWUWCe9HjktpfMlk/EALfPzD4ephPhltzLKOznlvYr6fdcr4thnzx9I1iOTxZf/J5rcQP+d4Mv/O03uoP+54vv+j/77Bf2PG/Q/btD/uJgv/b2OzX+oPzbQ/8nuFxqx+79UJmSZxVrZfN1zVZxD45ZqbrFol839lxGa/wOq+Y1FauH/Z1WcQ6fOPt+aJsvQrTuWrB+/b5PlC5z/EARBEARBEAThWCkSMmcYq0Xf1U6eloUmm9eGAuofZZPvwccM6Ic6U5Y7BtraM3BfGPpdo3EEom6gQbYupO8F6iekL4gnAw09ybrQ9IewZ16g/jD2zAvUH8aeeeFa/1ZCyLbjsKnV5vwnm/dU+q9pPTeOw0a/aB46k8w5snlHpf+R1tNzHF1az2FJ7F0Krodz/6lAL4wmpx+eA1RnBx/9Dz1taLTxc90rmO9eWB5w8x7sF9Xs7KP/ZTM+H+fc37bY6PfR/y3ONxjQ3z5Xu+pe+M69Dp4DVGcHX/2fBVXfZN3TV/9Pi35f/Z9Vv+iM2/+H/g1az2biNsv+T6UL1e9YV7NWxiWt5ypxm8c9/FX4DdE1fOy7oO6NLNzTeh4St3ma9PsA9cetf3wPX+BCdA0fW1RoDEn/Dxc7jdgAQAAA
+  </data>
+ </layer>
+ <layer id="32" name="Walls_Details" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3bsU4CMRzH8SNCwrHxAA7yEK7ujBANsy66+AJEnI1vAU9g3ExYeBfDyMjqVdoITUsP4/Vf776fpGnSu979f70OXS7LgGb4kC4AAAAgsm0uXQGabtqSrkAW+aUrkEV+6QqAQw+ci5L12I37vlu9F+4S2xPnubvvRV6fWOY610L3l7m7v9bXr2q6DgAAAAAAAFWbtHYNAICqPHWybBaxPXekEx96K1nP0HGfGnONH5vznmD+UA7Dd8+xcftaivmNMvmGnvUK7QNz3eTfJHK+s/f/KblsZeb+p+//19mVlPMrvv3tct//mWM/wyf1/L9lMofWra75lVmJZ6WWn/NP3PeFvr/9v+Bru7JSvn1Gzr/ee9+oyDYu2kBnvCj6l6Kt9jLfVJxfksmvMi/Pdr2vrWq8Dsqy5vlCmpT/C9uzALoAQAAA
+  </data>
+ </layer>
+ <layer id="33" name="Walls_Details2" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3PMQqAMBBE0QheUQ9l4XUEvVxSWJoyjuB7sGw7vxQAAAAAAAAAAAAAAIBvuqb0giz96QVZ+tMLsvSnF2TpTy/I0p9ekNXr3+b+/cHaOo/2l7t5f+g+X18FY1RTCDXhAEAAAA==
+  </data>
+ </layer>
+ <layer id="34" name="Doorways" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WwREAEBADQA9l0BMNKUqFqMJwuxUkn0xSAgAAAAAAAAAAAPjbyLcT3DWD9wcAOMr+RDXwL2q7ew/cHyKzf/YPgLcsEsPlQwBAAAA=
+  </data>
+ </layer>
+ <layer id="35" name="Furniture" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WQQqCQBQG4NHFbKsjVF6oLhDdpn11puowdYaEEkRGcJOmfh88HH7fYh4PwRAAAAAAAAAAAABgXhZ5CMtGrfKhb9Wfuc8/B8+yXol8F0M4tdQ+9n3L31lnIWyyoW8xrO13/iL7nKtnlTX7qp62Psal617rWdVj/+OX2mvR4fuvv7d/+F+Hxj/bMaazqTqXs11qdY3pbKpu5Wz3Wj1iOgMAYNzeq7TP8ABAAAA=
+  </data>
+ </layer>
+ <layer id="36" name="Static_Objects" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3TvwrCMBDH8S4R4qvo81hRUCeFDlWcxN0/D+DLiosJuQ4pxUGC9dLvB45fAhmSO1IUAAAAAD5Z2JBL2+89/sHcxrmV3LmcybrMoE9VBm9I4TGO9xsbZy25d7mS9bqjdwf6qcox8bxOzF+VM/MatNT/H7rw/wEAAAAAwBDdXF0l77K+9Hqj3/Jv9u9tetD0AQByUpru+vYcdGH+AJCnp4mr7WVC5Wo6CtXe+5pIAQAAQL83gBN4ygBAAAA=
+  </data>
+ </layer>
+ <layer id="37" name="Interac_Obj" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3asREAEBQDUI3C/lMwiY00Cr3a+Xe8N0GSOikBAAAAp7QSnQAAAAAAAAAAgBuqnwgBeo5OEGtu/cfnewAA8KYF5owIIABAAAA=
+  </data>
+ </layer>
+ <layer id="39" name="Sprite" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3aPQuDMBCAYaXYQdpB2qn/rIWCg9DB/7936WBDrgmScJfe+yxqTOA+gg7adUDa+DnegvGTMH+IjF0y1wLWjekp+GNH7QAAqLlqBwBV3t//Z+0AAABAlnXSjgAAAAAAAACwrc8cgx9e+u8lT8TRf9/ov23PxPe91H0rfsW5TN9zlh05lahDL5xr2dZhm59Un7ngXqiR/yG43tPnWiz0WxLWTfIyVM8SHsb3szX3oF6t51zz35bWaxNT8vkPAGjPGyn7B1QAQAAA
+  </data>
+ </layer>
+ <layer id="40" name="Front1" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3awQnCMBSA4Sht7kWKF3UbcQvFgze3UcdQx1DHEBdpbtaSViKSvCT/B4ES8sh7pCGQVqm8jUMnIFwROgEAAAAhdOgEAADe7arQGQBwUZfv52nZP+6bfaR7/1/1xyr3+oeMQicgzLqzxznvAaUmhVKV4wch6TE+5pAc42MOyTE+5pAc42Jlxi8TiwEAwMXZnB2XnnbN4Fx5DtT4yqD+euAOifslpGZm3um5aYvy8/nXcYgL65831h8AkKJN54ferbb3pepgaju22knb+1J1M7XdW+2h7X0AAKSgAdhq4BAAQAAA
+  </data>
+ </layer>
+ <layer id="41" name="Front2" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2YTU7DMBCF3TgUdQXH4PdGhTMFdqVbJDhGWwK7wjYC7kCLWiisGMszcoWcPyESJXmf9GTH9iSevsgdRSkA8nkLlFoGtn0nLbi/2LqW/vLXGl+M3Gu4W83+k4FtnwfVPA8Uoyr/N+z7N/wHAAAAAAAAAABay0grdcUa67p3Uz1zyjkhPZKeOph/L1QqYOmw7t0AAACoG6kJrrfqgzSZumGUMpcWnxWTFpcWk7XHvOeIXkivfK8x1wNFZeqG+R9ikn94zm3JmD36798PXYxpbyrKv+qYvN/bxARhcZm6qVdifRNiAAAAgDJk1Vpd+L6UVZ904ftSVq2BuqJ9HJCnhyzTn9I7fuTx2cxfkGKan2i3tukMKY8zlumvKadzT/5m/p60ofmVdmubzh3lELH3M219nnjyinhc3hNR0/mknGL2/kNbn1ee/GMel/dE1HSm2p0B4rHPVxk3ugztGRG1IP+1dmeAeOzzVcaNHkJ7RsQtyB8AAABoO187rpV+2znpW21zytfHff88AAAA0FR+ABgvBoAAQAAA
+  </data>
+ </layer>
+ <layer id="42" name="Logic" width="64" height="64" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2ZsU7DMBCGPaUSqVQknoCB58xK2QgrDDCBygoDEukEQmIDwkpXGMKAqBombBET4yaOE5LY59wnnc5xrMbX31dfHUKqiXyNQQ7jcvxTv9qSDdOzRBAEQRAEsZebMSGvHiFv1K78vH07Nj0zpClcQ+afqcUF12J/XNLPx0PjXZrzPl3Ly2w97/l/LaX9L3T8wst9Su0rG78CGD+LY0ntc/P/nyV/lxDg67iN+FOA8fN1PFT925wzVP0x/zH/24hfrCWYh7Aekg7n+JtbhjyvzVTjFgA0akLiwczHtlgByb+uQP1Rf9Tf9CzMgfqj/kPXX67Hh+YRBEF0OA0IOQv0vWuc1Ijp2MH4z6WYVLrPHIx/aPqHkq5cf538P1D0Q+Gug7lCWheRMNdL2r4I1r0M6z8K1j0H0u8C6p+3q3TVHYf6F/dvj8y8/1DRp/7sHOZ6Qp/Zo80n6vj71J+dw+y08H6xDh8V8UcdxK/S37b4dweuf1ij3te5z7BRf6bzNCj2InXqf46st436h1ldXuXl/386zDTrfxvzv09szP8+Ma1/Wf6LXqwH7mn7UKpt+HWTuiE1cPa/Nfp5NsvvWCP/H6g9UnvKxpfBx7l8LqjaC5rsE9BQ7QVN9glooP7N7rmCK/p/A7zGX6YAQAAA
+  </data>
+ </layer>
+ <layer id="46" name="Logic_Fly" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3SwQnAIAxAUTfo/st0ttJDoBSrFTwoee9mMIcvlgIAAAAAAAAAAAAAAMBs51Gf1eatnRX1Op73Rue7vMHtT180ve/2/sEu7zDSNXN3BZnbw9f/7u20zhlEc8b2kLkdAHouCkybZABAAAA=
+  </data>
+ </layer>
+ <layer id="45" name="Interactive" width="64" height="64" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WMQ6AIBBFQe5/rb2YpTZoQ1zlzyQkVBseoWAMeFY/mwsAAKv4s96rcd7Rdd/trbPs2v+Vji7p/WRLf//p/Z1qslbOTpXSn9I5k94PAAAAAAAAAACwkwNGlMMCAEAAAA==
+  </data>
+ </layer>
+</map>

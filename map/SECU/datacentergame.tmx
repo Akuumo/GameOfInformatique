@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.5" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="43" nextobjectid="1">
+ <tileset firstgid="1" name="ninja" tilewidth="32" tileheight="32" tilecount="84" columns="7">
+  <image source="images/ninja/ninja.png" width="224" height="384"/>
+ </tileset>
+ <tileset firstgid="85" name="DataCenter" tilewidth="16" tileheight="16" tilecount="1664" columns="52">
+  <image source="images/factory_tileset.png" width="832" height="512"/>
+ </tileset>
+ <tileset firstgid="1749" name="Logic" tilewidth="16" tileheight="16" tilecount="100" columns="10">
+  <image source="../../../TiledProjects/Images/logic.png" width="160" height="160"/>
+ </tileset>
+ <layer id="28" name="Ground" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3Uuw2AMAwFQENG4TMUM5FtGYAgQkeNC644yUr1nhy5DhEVAAAAAAAAAAAAgF9YSsTUrM3c5+stO9dX9tb1GCO2crvm+qP+j6d/do4sU//72TnsP8fS7192jjTlvoXpOQAAAIBXJ3cl8fgAQAAA
+  </data>
+ </layer>
+ <layer id="29" name="Ground_Details" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3YTQ7BQBjG8WF6E9Se07QXcBmWWFs4DJYO4iO2Pt4mbWYi0yIIM/P/JU9oWczTt2mbKgUAAAAAAAAAAAAAAAAAQPhG7ecTIvqbdLRSXUlPkmqzHXL/QWIy0+4Uvw2TX6/0M8bS5ySz3Et2kqPkIJnI/rPkIlmXKb5f9a9X/B27dn1W0nmjzTFyJQv0uBSq/iGrm+vemn/TOcL8/VY316M1/wPzjxL96R9L/35LnvfvMpXuc222M8d/7Pyb9IU12T3S8rOav73Pp/6uTq/E7v9M/k3TWl3ne5G8oX/uWf/8QVdXMquH6/rnU/93Vde/WMV0/3OhP/23EfdfJEotPX3feQNdtFv1AEAAAA==
+  </data>
+ </layer>
+ <layer id="30" name="Wall_Back" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3PsQ0AEBRFUSTmMY7959BYQPGjkOCc5HaveSkBAAAAAAAAAAC/GDnei37/30o8AAC4Va/rdncAAABw0gRkBNxYAEAAAA==
+  </data>
+ </layer>
+ <layer id="31" name="Walls" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2YQW7CMBAATbjwG3qHz0A5tICAfIb0AlJF+0o4EAQRZmU7DiIhCzPSKjiKLY/sOLsYAwAAAAAAAAAAAAAAAAAAAADwHgwSY3qRMUyePdvHs6jgVOVZLeB/vsa8B/8v4C89d5frKsJt+QLnwmm9x3l8iphEOPj6aXov8Dcmc8RPhMPa00+bv4Yx6wJ/HWPWBf46xqwL/G/bVeo/X76n2d+VD009eY4v32mbf5rPZ9R1r91OtE95/7fDV8bM8pd1QEzt0CRyTb9K3Oy8bivyu83l+mvle3K/xOTOTeLL8e2YW7+rosF/k7jzfLm+mTX30Fn4Zz0n64CY2qFJ7j2PQvumbWdcCPzv7+eqcTNl/r7/qcoi9B1LS/q2iWIP7zvXcLXlvUPHP6am9ccf/3f2L87wvhWutrz3EXDU5H8EDSUfLQBAAAA=
+  </data>
+ </layer>
+ <layer id="32" name="Walls_Details" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WQQpAQBSAYeIiHImSK8mNlI0LuYIRSUp21Pi+er1mN/+sJkkAAAAAAAAAAAAAiEmbbgMAQDxm/zsAOAyXc59/co1XVKGtDlPujUXYXZjp1Nz8oH9tHrNt380U8Tusxsj7nvypfwG2bIpxAEAAAA==
+  </data>
+ </layer>
+ <layer id="33" name="Walls_Details2" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3PsQkAIRBFQQNb1KIMrh3B6jQw9EJFcAaWTf8LAQAAAAAAAAAAAAAAAAAAuFWJ//eCPDrr+Gk2f4vudnwV7NEBWmIixgBAAAA=
+  </data>
+ </layer>
+ <layer id="34" name="Doorways" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WwREAEBADQA9l0BMNKUqFqMJwuxUkn0xSAgAAAAAAAAAAAPjbyLcT3DWD9wcAOMr+RDXwL2q7ew/cHyKzf/YPgLcsEsPlQwBAAAA=
+  </data>
+ </layer>
+ <layer id="35" name="Furniture" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WQQqCQBQG4NHFbKsjVF6oLhDdpn11puowdYaEEkRGcJOmfh88HH7fYh4PwRAAAAAAAAAAAABgXhZ5CMtGrfKhb9Wfuc8/B8+yXol8F0M4tdQ+9n3L31lnIWyyoW8xrO13/iL7nKtnlTX7qp62Psal617rWdVj/+OX2mvR4fuvv7d/+F+Hxj/bMaazqTqXs11qdY3pbKpu5Wz3Wj1iOgMAYNzeq7TP8ABAAAA=
+  </data>
+ </layer>
+ <layer id="36" name="Static_Objects" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3Ruw2AIABAQRtcRvdxIj8rGxslYKGxstCId8kLkFDwqSoAAAAAAAAAAAD4l3FryOOU5/2rJ3pWvHO87/4G+zsAlKQL193dx7f4f4AyzeHY2RJSpWrr1Hkda3IAAHzfCrtbqaYAQAAA
+  </data>
+ </layer>
+ <layer id="37" name="Interactive" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3QMREAIAwEwTT4t4WjNBT0GEgm7Cq4/wgAAAAAAAAAAAAAAACgu72qC2qdZ39+/gcAADNdw3GyNABAAAA=
+  </data>
+ </layer>
+ <layer id="39" name="Sprite" width="64" height="64" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3RMQ4AEBQFQe5/aYWWRG1nKtHtf2MAAAAAAAAAAAAA/G0+/tFR2b/SyZn92+wP27y8i2r9td6a4r7F5lduA8BvFqvwVnsAQAAA
+  </data>
+ </layer>
+ <layer id="40" name="Front1" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3SwQnCMBQG4BzabCBeqquJM6ljVMfQjlFcxBxbSHsQRJp8H/yQvOSQx0sIAAAAAAAAAAAAUI++CeG+kEfz79f93rjS47uC/nft8tl+5Qy2qEt/+pBybOfrb++xLeZfN/MHoESnON+fY75Wqkvq7TrJLeZrpXqm3l6TDDFfA4ASfAD50fB1AEAAAA==
+  </data>
+ </layer>
+ <layer id="41" name="Front2" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3UQW7CMBCFYZdJOQvQcqPSMwV20MuEknYHvUxCy46x7JG7cHatkMP/SU8YO4s8TWTnAAAAAAAAAAAAAAAAAAC4H1txbjeQN7n12/2/o3Y8DeTrDvo/VM5NBiLVrd8Of22mM53H+PVev/FFZs7+fK1p9byR9GzpXrTHKsave+30munvzz80P3reSXq2dAftUMfZv0uYc5PpVcd9+04spfvWTm2c/VnCnLtM/zbu23diKd1e0h1gM87N1fZ9NlW4I+oR9O8l3QE249xcbd/nswp3RDuC/gAAjN3lMf3aeuyepyG/LeP/p2n+HACAUl0BHVOiJQBAAAA=
+  </data>
+ </layer>
+ <layer id="42" name="Logic" width="64" height="64" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3YvQ7CIBSGYe6cG9K1rjropKmrjs4mbv5sQlIioZbSpiQ99H2SBmxJU/KJnKoUAAAAAAAAAAAAAAAAAKB0R63USae3pTkMmNO+wPmfgznFcq8LnP/S8q+CXF3+Ket/EzkvxT3Ds0r6Xty8Z72a/kW325A9v9Pt1pH0u0D+v35frqnjyH/6e+ZC/tPfU2r+U5GU/2rh+VcD6v2U69Yc87c5r/X/1jek/nfCvOeYf9XU5X1t+P6XohZc/2M5uta/3/r1wMP0t0Ft4z7nqBtysuv7k7D+n+Z4mePdjO/ixpX8v2BsLxizT0gT2wvG7BPSkP+4a6UoJf8vKlu6LQBAAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,35 @@
+	private void updateMouse(GameContainer container) 
+	{
+		posX = container.getHeight() / 2 -Mouse.getX() + 100;
+	    posY = container.getWidth() / 2 -Mouse.getY() - 100 ;
+	    mouse = "Mouse position x:" + posX + " y:" +  posY;
+		a = Math.atan(1+posY / 1+posX);
+	}
+	
+	public float getAngle(Point target) {
+	    float angle = (float) Math.toDegrees(Math.atan2(target.y - y, target.x - x));
+
+	    if(angle < 0){
+	        angle += 360;
+	    }
+
+	    return angle;
+	}
+
+	private boolean isInCollision( float x, float y ) 
+	{
+		boolean collision = false;
+		Color   color	  = null;
+		int 	pixX	  = (int) x % tileW;
+		int     pixY	  = (int) y % tileH ;
+		
+		collision = ( tile != null );
+		
+		if ( collision ) 
+		{ 
+			//Si le tile est fonctionnel
+			color 	  = tile.getColor( pixX, pixY );
+			collision = ( color.getAlpha() > 0 );  //Si pos perso sur couleur rouge de logiclayer
+		}
+		return collision;
+	}
