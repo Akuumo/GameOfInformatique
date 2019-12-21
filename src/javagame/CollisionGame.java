@@ -1,5 +1,7 @@
 package javagame;
 
+import java.sql.Timestamp;
+
 import org.newdawn.slick.Animation;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
@@ -79,6 +81,10 @@ public class CollisionGame extends BasicGame
 	
 	private boolean isJumping;
 	private boolean isFalling;
+	
+	private int timer;
+	private Timestamp timestampA;
+	private Timestamp timestampB;
 
 	//
 	
@@ -140,6 +146,10 @@ public class CollisionGame extends BasicGame
 		this.dHitbox   = player.getDhitbox();
 		
 		this.isJumping = player.isJumping();
+		
+		this.timer = 60000;
+		timestampA = new Timestamp(System.currentTimeMillis());
+		this.isFalling = false;
 	}
 	
 	public void render( GameContainer container, Graphics g ) throws SlickException 
@@ -148,8 +158,8 @@ public class CollisionGame extends BasicGame
 				
 		g.scale(scale, scale);
 		
-		translateX = (g_cntr_W/2) - posX;
-		translateY = (g_cntr_H/2) - posY;
+		translateX = (g_cntr_W/2) - player.getPosX();
+		translateY = (g_cntr_H/2) - player.getPosY();
 
 		g.translate(translateX, translateY);
 
@@ -161,17 +171,26 @@ public class CollisionGame extends BasicGame
 			{
 				if( player.isJumping() )
 				{
-					g.drawAnimation(jmpMvmts[player.direction + (jumpingUp ? 4 : 0)], posX-(42/scale), posY-(42/scale));
+					g.drawAnimation(jmpMvmts[player.direction + (isFalling ? 0 : 4)], player.getPosX()-(42/scale), player.getPosY()-(42/scale));
+					System.out.println("Jump");
 				}
 				else
 				{
-					g.drawAnimation(playerAnims[player.direction + (moving ? 4 : 0)], posX-(42/scale), posY-(42/scale));
+					if(isFalling)
+					{
+						g.drawAnimation(jmpMvmts[player.direction + (isFalling ? 0 : 4)], player.getPosX()-(42/scale), player.getPosY()-(42/scale));
+						System.out.println("Fall");
+					}
+					else
+					{
+						g.drawAnimation(playerAnims[player.direction + (moving ? 4 : 0)], player.getPosX()-(42/scale), player.getPosY()-(42/scale));
+					}
 				}
 				
 
 				//g.drawOval(player.pos_x, player.pos_y+10, 10,  10);
 
-				g.drawRect(posX, posY+dHitbox, wHitbox, hHitbox );
+				g.drawRect(player.getPosX(), player.getPosY()+dHitbox, wHitbox, hHitbox );
 				
 				//g.drawAnimation(guardAnims[2], guard.pos_x, guard.pos_y);
 
@@ -187,11 +206,25 @@ public class CollisionGame extends BasicGame
 		//System.out.println("R: "+x+" - "+y);
 		//g.drawOval( 0, 0, tileW, tileH );
 	}
-
+	
+	boolean stop = false;
+	
 	@Override
 	public void update( GameContainer container, int delta ) throws SlickException 
 	{
-		//System.out.println("update"+delta);
+		/*
+		if(timer-delta>0) 
+		{
+			timer-=delta;
+			System.out.println(timer);
+		}
+		else if(!stop)
+		{
+			timestampB = new Timestamp(System.currentTimeMillis());
+			System.out.println(" Time : "+(timestampB.getTime()-timestampA.getTime()));
+			stop = true;
+		}
+		*/
 		updateCharacter( container, delta );
 	}	
 	
@@ -208,18 +241,28 @@ public class CollisionGame extends BasicGame
 	    	player.jump( delta );
  	    	//System.out.println("isJumping:"+delta);
 	    }
-	    else if( posY <= 895 )
-		{	    
-	    	yHitbox   = posY+hHitbox;
-	    	futurYcol = getFuturY(delta, yHitbox);
-	    	futurY    = getFuturY(delta);
+	    else if( player.getPosY() <= 895 )
+		{	
+	    	xHitbox   = player.getPosX()+wHitbox;
+	    	yHitbox   = player.getPosY()+ dHitbox + hHitbox;
+	    	futurYcol = getFuturY( delta, yHitbox, Entity.DIR_DOWN );
 	    	
-	    	if(!isFlyCollision(posX, futurYcol)&&!isCollision(posX, futurY))
+	    	if(!isFlyCollision(player.getPosX(), xHitbox, futurYcol))
 	    	{
-	    		posY = fall( posX, posY, delta );
-		    	System.out.println("fall:"+delta);
-	    	}	    	
+	    		player.setPosY(fall( player.getPosX(), player.getPosY(), delta ));
+	    		this.isFalling = true;
+	    		System.out.println("Fall");
+	    	}
+	    	else
+	    	{
+	    		this.isFalling = false;
+	    		System.out.println("Stop Fall A");
+	    	}
 		}
+    	else
+    	{
+    		if( isFalling ) this.isFalling = false; System.out.println("Stop Fall B");
+    	}
 
 		if(this.moving)
 		{			
@@ -228,12 +271,12 @@ public class CollisionGame extends BasicGame
 			if(player.sprint){ speed = player.speed * 1.1f; }
 			else       		 { speed = player.speed;  }
 			
-			xHitbox = posX; yHitbox = posY;
+			xHitbox = player.getPosX(); yHitbox = player.getPosY();
 			
 		    switch (player.direction) 
 		    {
-		    	case Entity.DIR_DOWN  : xHitbox = posX;         yHitbox = posY+hHitbox; break;
-		    	case Entity.DIR_RIGHT : xHitbox = posX+wHitbox; yHitbox = posY;         break;
+		    	case Entity.DIR_DOWN  : xHitbox = player.getPosX();         yHitbox = player.getPosY()+hHitbox; break;
+		    	case Entity.DIR_RIGHT : xHitbox = player.getPosX()+wHitbox; yHitbox = player.getPosY();         break;
 		    }
 		    
 			futurX = getFuturX(delta);
@@ -246,8 +289,8 @@ public class CollisionGame extends BasicGame
 	        if (!isCollision(futurXcol, futurYcol))
 			//if(true)
 	        {
-				if((futurX>=0 && futurX<mapW)){ posX = futurX; }
-				if((futurY>=0 && futurY<mapH)){ posY = futurY; }
+				if((futurX>=0 && futurX<mapW)){ player.setPosX(futurX); }
+				if((futurY>=0 && futurY<mapH)){ player.setPosY(futurY); }
 	        } 
 		}
 	}
@@ -259,52 +302,14 @@ public class CollisionGame extends BasicGame
 
 	float   posBJump = 0.0f;
 	float   posHJump = 0.0f;
-   
-	
-	private boolean isFalling( float posX, float posY, float delta ) 
-	{
-	  return false;
-	}
 	
 	private float fall( float posX, float posY, float delta ) 
 	{
-	    return (posY + ((delta*speed) *.75f) );
+	    return (posY + ((delta*speed) *.7f) );
 	}
-	
-	private float jump( float posX, float posY, float delta ) 
-	{	
-		float posJump = posY;
-				
-		if(!initJump)
-		{
-			posBJump = posY;
-			posHJump = posY - 30;	
-			initJump  = true;
-		}
-
-		if(jumpingUp)
-		{
-			if( posY <= posHJump ){ jumpingUp = false; }
-			else{ posJump = (posY - (delta*speed)); }
-		}
-		else
-		{			
-			if( posY >= posBJump || isFlyCollision(posX, posY))
-			{ 
-				jumpingUp = true;
-				isJumping = false;
-				initJump  = false;
-				
-				if(!isFlyCollision(posX, posY)) posJump = posBJump;
-			}
-			else{ posJump = (posY + ((delta*speed) *.75f) ); }
-		}
-		
-	    return posJump;
-	}
-
-	private float getFuturX( float delta ) { return getFuturX(delta, posX); }
-	private float getFuturY( float delta ) { return getFuturY(delta, posY); }
+	 
+	private float getFuturX( float delta ) { return getFuturX(delta, player.getPosX()); }
+	private float getFuturY( float delta ) { return getFuturY(delta, player.getPosY()); }
 	
 	private float getFuturX( float delta, float x ) 
 	{
@@ -325,7 +330,37 @@ public class CollisionGame extends BasicGame
 
 	    return futurY;
 	}
+	
+	private float getFuturY( float delta, float y, int direction ) 
+	{
+	    float futurY = y;
+	    
+	    switch (player.direction) 
+	    {
+	    	case Entity.DIR_UP   : futurY = (y - (delta*speed)); break;
+	    	case Entity.DIR_DOWN : futurY = (y + (delta*speed)); break;
+	    }
 
+	    return futurY;
+	}
+
+	
+	private boolean isFlyCollision( float x1, float x2, float y )
+	{
+		int i = (int) x1;
+		boolean collision = false;
+		
+		while( i < x2 && !collision )
+		{
+			collision = isFlyCollision( i, y );
+			
+			System.out.println("i - x2 (y) : " + i +" - "+ x2 + "("+y+")");
+			i++;
+		}
+		
+		return collision;
+	}
+	
 	private boolean isFlyCollision( float x, float y ) 
 	{
 	    Image tile = this.map.getTileImage((int) x / tileW, (int) y / tileH, logicFlyLayer);
@@ -347,6 +382,9 @@ public class CollisionGame extends BasicGame
 	        Color color = tile.getColor((int) x % tileW, (int) y % tileH);
 	        collision = color.getAlpha() > 0;
 	    }
+	    
+	    if(collision) System.out.println("Collision!");
+	    
 	    return collision;
 	}
 
@@ -362,6 +400,7 @@ public class CollisionGame extends BasicGame
 	    	//case Input.KEY_S: this.move_down  = true;  break;
 	    	case Input.KEY_D:   this.move_right = true;  break;
 	    	case Input.KEY_LSHIFT: player.sprint = true;  break;
+	    	case Input.KEY_LCONTROL: isFalling = true;  break;
 	    	case Input.KEY_SPACE:  if( !player.isJumping() ){ player.jumping(true); System.out.println("player.jumping(true)"); }  break;
 	    }
 

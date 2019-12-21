@@ -10,7 +10,7 @@ public class Player extends Entity
 	{
 		super(pos_x, pos_y);
 
-		this.speed = 0.15f;
+		this.speed = .1f;
 	}
 	
 	@Override

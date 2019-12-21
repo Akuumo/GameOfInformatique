@@ -64,7 +64,7 @@
  </layer>
  <layer id="32" name="Walls_Details" width="64" height="64">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAACu3bsU4CMRzH8SNCwrHxAA7yEK7ujBANsy66+AJEnI1vAU9g3ExYeBfDyMjqVdoITUsP4/Vf776fpGnSu979f70OXS7LgGb4kC4AAAAgsm0uXQGabtqSrkAW+aUrkEV+6QqAQw+ci5L12I37vlu9F+4S2xPnubvvRV6fWOY610L3l7m7v9bXr2q6DgAAAAAAAFWbtHYNAICqPHWybBaxPXekEx96K1nP0HGfGnONH5vznmD+UA7Dd8+xcftaivmNMvmGnvUK7QNz3eTfJHK+s/f/KblsZeb+p+//19mVlPMrvv3tct//mWM/wyf1/L9lMofWra75lVmJZ6WWn/NP3PeFvr/9v+Bru7JSvn1Gzr/ee9+oyDYu2kBnvCj6l6Kt9jLfVJxfksmvMi/Pdr2vrWq8Dsqy5vlCmpT/C9uzALoAQAAA
+   H4sIAAAAAAAACu3bMW7CMBiG4aCCRLgDAxyia3fGIhAzTCxcAJXOqLdoT4DYkFi4C2JkZCUGW4IoiQMi/t3kfSTLkp3g/3M8eCEIgGrYSBcAAADg2CmUrgBVN69JVyCL/NIVyCK/dAXAvSn3Im/Nmm7XG+uzMPHsTLTD5L7leH9c+dW5/nT/Hib3Az3/UdJ9AAAAAAAAKNqodm0AABTlqxEEC4ftuyGd+N4qZz29hOfUWNJ41jtrD/Pbchhpz2SNx+d8zG/kyddL2S/bOTDzJv/Rk/td/Pw/kisuz7v/6fu/Orvic34l7XxneWTffM//LJPZtm9lza8scvyWb/m5/7hdz/b94/8X/KkXVsrF3nH+w816n1G2ftS6OmMn6pdR291kHhacX5LJrzJv3659WtuVeB+Ubcnz2VQp/xnzHLWhAEAAAA==
   </data>
  </layer>
  <layer id="33" name="Walls_Details2" width="64" height="64">
@@ -87,19 +87,19 @@
    H4sIAAAAAAAACu3TvwrCMBDH8S4R4qvo81hRUCeFDlWcxN0/D+DLiosJuQ4pxUGC9dLvB45fAhmSO1IUAAAAAD5Z2JBL2+89/sHcxrmV3LmcybrMoE9VBm9I4TGO9xsbZy25d7mS9bqjdwf6qcox8bxOzF+VM/MatNT/H7rw/wEAAAAAwBDdXF0l77K+9Hqj3/Jv9u9tetD0AQByUpru+vYcdGH+AJCnp4mr7WVC5Wo6CtXe+5pIAQAAQL83gBN4ygBAAAA=
   </data>
  </layer>
- <layer id="37" name="Interac_Obj" width="64" height="64">
+ <layer id="37" name="Interac_Obj" width="64" height="64" visible="0">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAACu3asREAEBQDUI3C/lMwiY00Cr3a+Xe8N0GSOikBAAAAp7QSnQAAAAAAAAAAgBuqnwgBeo5OEGtu/cfnewAA8KYF5owIIABAAAA=
   </data>
  </layer>
- <layer id="39" name="Sprite" width="64" height="64">
+ <layer id="39" name="Sprite" width="64" height="64" visible="0">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAACu3aPQuDMBCAYaXYQdpB2qn/rIWCg9DB/7936WBDrgmScJfe+yxqTOA+gg7adUDa+DnegvGTMH+IjF0y1wLWjekp+GNH7QAAqLlqBwBV3t//Z+0AAABAlnXSjgAAAAAAAACwrc8cgx9e+u8lT8TRf9/ov23PxPe91H0rfsW5TN9zlh05lahDL5xr2dZhm59Un7ngXqiR/yG43tPnWiz0WxLWTfIyVM8SHsb3szX3oF6t51zz35bWaxNT8vkPAGjPGyn7B1QAQAAA
+   H4sIAAAAAAAACu3aOw+CMBDAcfA1EB2Im99ME40DxkG//+zCgE1rCWlzd97/t/BO7kEhKTSNbyvpAJTbjMtuXJ6C4/vEddvIvuPMawHtuvwp+GM76QAAiGH8++b9/X+QDgAQ8uilIwAg4W147L8Mx456WukAlLkF44T3PQAAAAAAvsTmSpg/8c1L/73kiTj67xv91+2a+U6RO67FrziH/vucYUFOJerQJtalTOswzS9Vn3vBe6FG/utge0mfa9HQ75SwbilPRfUs4aL8ftbmHNTLes41/22xXpuYks9/AIA9H+kTQO4AQAAA
   </data>
  </layer>
  <layer id="40" name="Front1" width="64" height="64">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAACu3awQnCMBSA4Sht7kWKF3UbcQvFgze3UcdQx1DHEBdpbtaSViKSvCT/B4ES8sh7pCGQVqm8jUMnIFwROgEAAAAhdOgEAADe7arQGQBwUZfv52nZP+6bfaR7/1/1xyr3+oeMQicgzLqzxznvAaUmhVKV4wch6TE+5pAc42MOyTE+5pAc42Jlxi8TiwEAwMXZnB2XnnbN4Fx5DtT4yqD+euAOifslpGZm3um5aYvy8/nXcYgL65831h8AkKJN54ferbb3pepgaju22knb+1J1M7XdW+2h7X0AAKSgAdhq4BAAQAAA
+   H4sIAAAAAAAACu3Y0QmDMBCA4TyYvBeRvli3KY5ROlPbMWzH0I5RXMR7UyEKVgjx8n9wEI8cxxEhEGMAAAAAAAAA4NgKO67PdnmfVsw/rlOcHwD2yDNjTpmumhA9Yq4J0SPmmhA9Yq7Zopb9V2U1AABs0cjd8V6ITwL3ym9lxj6B+YuVNyTel6BNKf/0RaKy8/W/+3AsnH/aOH8AgEY3N/++O39Oq4fM9pzEy/lzWrUyWzeJr/PnAADQYAD6VnZMAEAAAA==
   </data>
  </layer>
  <layer id="41" name="Front2" width="64" height="64">
@@ -112,7 +112,7 @@
    H4sIAAAAAAAACu2ZsU7DMBCGPaUSqVQknoCB58xK2QgrDDCBygoDEukEQmIDwkpXGMKAqBombBET4yaOE5LY59wnnc5xrMbX31dfHUKqiXyNQQ7jcvxTv9qSDdOzRBAEQRAEsZebMSGvHiFv1K78vH07Nj0zpClcQ+afqcUF12J/XNLPx0PjXZrzPl3Ly2w97/l/LaX9L3T8wst9Su0rG78CGD+LY0ntc/P/nyV/lxDg67iN+FOA8fN1PFT925wzVP0x/zH/24hfrCWYh7Aekg7n+JtbhjyvzVTjFgA0akLiwczHtlgByb+uQP1Rf9Tf9CzMgfqj/kPXX67Hh+YRBEF0OA0IOQv0vWuc1Ijp2MH4z6WYVLrPHIx/aPqHkq5cf538P1D0Q+Gug7lCWheRMNdL2r4I1r0M6z8K1j0H0u8C6p+3q3TVHYf6F/dvj8y8/1DRp/7sHOZ6Qp/Zo80n6vj71J+dw+y08H6xDh8V8UcdxK/S37b4dweuf1ij3te5z7BRf6bzNCj2InXqf46st436h1ldXuXl/386zDTrfxvzv09szP8+Ma1/Wf6LXqwH7mn7UKpt+HWTuiE1cPa/Nfp5NsvvWCP/H6g9UnvKxpfBx7l8LqjaC5rsE9BQ7QVN9glooP7N7rmCK/p/A7zGX6YAQAAA
   </data>
  </layer>
- <layer id="46" name="Logic_Fly" width="64" height="64">
+ <layer id="46" name="Logic_Fly" width="64" height="64" visible="0">
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAACu3SwQnAIAxAUTfo/st0ttJDoBSrFTwoee9mMIcvlgIAAAAAAAAAAAAAAMBs51Gf1eatnRX1Op73Rue7vMHtT180ve/2/sEu7zDSNXN3BZnbw9f/7u20zhlEc8b2kLkdAHouCkybZABAAAA=
   </data>

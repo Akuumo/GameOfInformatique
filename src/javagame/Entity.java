@@ -91,8 +91,6 @@ public abstract class Entity
 		}
 		return animation;
 	}
-
-
 	
 	public float       getSpeed()     { return this.speed; }
 	public Rectangle   getHitbox()    { return this.hitbox; }
@@ -102,6 +100,8 @@ public abstract class Entity
 	
 	public float getPosX()            { return this.posX; }
 	public float getPosY()            { return this.posY; }
+	public void  setPosX( float posX ){ this.posX = posX; }
+	public void  setPosY( float posY) { this.posY = posY; }
 
 	public void setDhitbox( int dHitbox ) { this.dHitbox = dHitbox; }
 	public void setHitbox( int w, int h ) 
@@ -126,8 +126,8 @@ public abstract class Entity
 			initJump = true;
 		}
 
-		if( nextPos < posHJump ){ initJump = false; jumping = false; System.out.println("nextPos < posHJump "); }
-		else					{ posY    = nextPos; System.out.println("nextPos :" + nextPos); }
+		if( nextPos < posHJump ){ initJump = false; jumping = false;  }
+		else					{ posY    = nextPos; }
 		
 	    return this.isJumping();
 	}
