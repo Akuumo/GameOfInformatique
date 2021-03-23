@@ -1,2 +1,2 @@
 # GameOfInformatique
-Jeu Vidéal
+Mini jeu vidéo en java
